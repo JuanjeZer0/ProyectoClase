@@ -2,7 +2,7 @@
 package aeropuerto;
 
 public class Persona {
-  private String nombre;
+  String nombre;
   private String apellidos;
   private String dni;
   private String email;
