@@ -27,13 +27,7 @@ public class Tienda {
     public Producto[] getProductos() {
         return productos;
     }
-    
-    public void agregarProducto(Producto productos){
-         if (cantProductos < productos.length) {
-            productos[cantProductos] = productos;
-            cantProductos++;
+  
+
+   
     }
-}
-    
-    
-}
