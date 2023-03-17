@@ -1,21 +1,16 @@
 
 package Examen7;
 
-public class Arquero {
+public class Arquero extends Personaje{
         
-    private String nombre;
-    private int puntosVida;
-    private int fuerza;
     private int punteria;
     private String arco;
     
     
     Arquero(String nombre,int puntosVida,int fuerza,int punteria,String arco){
+        super(nombre,puntosVida,fuerza);
         this.arco=arco;
-        this.fuerza=fuerza;
         this.punteria=punteria;
-        this.nombre=nombre;
-        this.puntosVida=puntosVida;
     }
 
     public String getArco() {
@@ -33,37 +28,38 @@ public class Arquero {
     public void setPunteria(int punteria) {
         this.punteria = punteria;
     }
-
-    public int getPuntosVida() {
-        return puntosVida;
+    @Override
+    public int getpuntosVida() {
+        return super.getpuntosVida();
     }
-
-    public void setPuntosVida(int puntosVida) {
-        this.puntosVida = puntosVida;
+    @Override
+    public void setpuntosVida(int puntosVida) {
+        super.setpuntosVida(puntosVida);
     }
-
-    public int getFuerza() {
-        return fuerza;
+    @Override
+    public int getfuerza() {
+        return super.getfuerza();
     }
-
-    public void setFuerza(int fuerza) {
-        this.fuerza = fuerza;
+    @Override
+    public void setfuerza(int fuerza) {
+        this.setfuerza(fuerza);
     }
-
-    public String getNombre() {
-        return nombre;
+    @Override
+    public String getnombre() {
+        return super.getnombre();
     }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    @Override
+    public void setnombre(String nombre) {
+        this.setnombre(nombre);
     }
     
+    @Override
     public void atacar(){
-        System.out.println("El arquero "+this.getNombre()+" está atacando");
+        System.out.println("El arquero "+this.getnombre()+" está atacando");
     }
-    
+    @Override
     public void defender(){
-        System.out.println("El arquero "+this.getNombre()+" está defendiendo");
+        System.out.println("El arquero "+this.getnombre()+" está defendiendo");
     }
     
 }

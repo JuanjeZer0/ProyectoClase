@@ -1,28 +1,24 @@
 
 package Examen7;
 
-public class Guerrero {
-        
-    private String nombre;
-    private int puntosVida;
-    private int fuerza;
+public class Guerrero extends Personaje {
+
     private int armadura;
     private String arma;
     
     Guerrero(String nombre,int puntosVida, int fuerza,int armadura,String arma){
+        super(nombre,puntosVida,fuerza);
         this.arma=arma;
         this.armadura=armadura;
-        this.fuerza=fuerza;
-        this.nombre=nombre;
-        this.puntosVida=puntosVida;
+       
     }
-
-    public int getPuntosVida() {
-        return puntosVida;
+    @Override
+    public int getpuntosVida() {
+        return super.getpuntosVida();
     }
-
-    public void setPuntosVida(int puntosVida) {
-        this.puntosVida = puntosVida;
+    @Override
+    public void setpuntosVida(int puntosVida) {
+        super.getpuntosVida();
     }
 
     public String getArma() {
@@ -40,29 +36,31 @@ public class Guerrero {
     public void setArmadura(int armadura) {
         this.armadura = armadura;
     }
-
-    public String getNombre() {
-        return nombre;
+    @Override
+    public String getnombre() {
+        return super.getnombre();
     }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    @Override
+    public void setnombre(String nombre) {
+        super.setnombre(nombre);
     }
-
-    public int getFuerza() {
-        return fuerza;
+    @Override
+    public int getfuerza() {
+        return super.getfuerza();
     }
-
-    public void setFuerza(int fuerza) {
-        this.fuerza = fuerza;
+    @Override
+    public void setfuerza(int fuerza) {
+        super.setfuerza(fuerza);
     }
     
+    @Override
     public void atacar(){
-        System.out.println("El guerrero "+this.getNombre()+" está atacando");
+        System.out.println("El guerrero "+this.getnombre()+" está atacando");
     }
     
+    @Override
     public void defender(){
-        System.out.println("El guerrero "+this.getNombre()+" está defendiendo");
+        System.out.println("El guerrero "+this.getnombre()+" está defendiendo");
     }
 
       

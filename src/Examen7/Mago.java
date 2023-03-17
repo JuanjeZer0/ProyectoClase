@@ -1,37 +1,32 @@
 
 package Examen7;
 
-public class Mago {
+public class Mago extends Personaje{
     
-    private String nombre;
-    private int puntosVida;
-    private int fuerza;
     private int magia;
     private String varita;
     
     
     Mago(String nombre,int puntosVida,int fuerza,int magia,String varita){
-        this.fuerza=fuerza;
+        super(nombre,puntosVida,fuerza);
         this.magia=magia;
-        this.puntosVida=puntosVida;
-        this.nombre=nombre;
         this.varita=varita;
     }
-
-    public String getNombre() {
-        return nombre;
+    @Override
+    public String getnombre() {
+        return super.getnombre();
     }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    @Override
+    public void setnombre(String nombre) {
+        super.setnombre(nombre);
     }
-
-    public int getPuntosVida() {
-        return puntosVida;
+    @Override
+    public int getpuntosVida() {
+        return super.getpuntosVida();
     }
-
-    public void setPuntosVida(int puntosVida) {
-        this.puntosVida = puntosVida;
+    @Override
+    public void setpuntosVida(int puntosVida) {
+        super.setpuntosVida(puntosVida);
     }
 
     public String getVarita() {
@@ -41,13 +36,13 @@ public class Mago {
     public void setVarita(String varita) {
         this.varita = varita;
     }
-
-    public int getFuerza() {
-        return fuerza;
+    @Override
+    public int getfuerza() {
+        return super.getfuerza();
     }
-
-    public void setFuerza(int fuerza) {
-        this.fuerza = fuerza;
+    @Override
+    public void setfuerza(int fuerza) {
+        super.setfuerza(fuerza);
     }
 
     public void setMagia(int magia) {
@@ -58,12 +53,35 @@ public class Mago {
         return magia;
     }
     
+    @Override
     public void atacar(){
-        System.out.println("El mago "+this.getNombre()+" está atacando");
+        System.out.println("El mago "+this.getnombre()+" está atacando");
     }
     
+    @Override
     public void defender(){
-        System.out.println("El mago "+this.getNombre()+" está defendiendo");
+        System.out.println("El mago "+this.getnombre()+" está defendiendo");
+    }
+    
+    //equals
+    
+    @Override
+    public boolean equals(Object otro){
+        boolean res = false;
+        
+        Mago otroMago= (Mago)otro;
+        
+        if(this.getpuntosVida()==otroMago.getpuntosVida() && this.getfuerza()==otroMago.getfuerza() && this.magia == otroMago.magia){   
+            res = true;
+        }
+        return res;
+    }
+     
+    //toString
+    
+    @Override
+    public String toString(){
+        return "Nombre: "+ this.getnombre();
     }
     
 }

@@ -1,8 +1,6 @@
 
 package Examen7;
 
-import com.sun.org.apache.xpath.internal.operations.Equals;
-
 public class WarriorsLeague {
     
     public static void main(String[] args) {
@@ -26,6 +24,9 @@ public class WarriorsLeague {
         
         //comparacion entre los magos
         System.out.println("¿Los magos son iguales? "+mago1.equals(mago2));        
+    
+        //toString
+        System.out.println(mago1);
         
     }
     

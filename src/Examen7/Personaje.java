@@ -13,38 +13,38 @@ public class Personaje {
         this.puntosVida=puntosVida;
     }
 
-    public void setPuntosVida(int puntosVida) {
+    public void setpuntosVida(int puntosVida) {
         this.puntosVida = puntosVida;
     }
 
-    public int getPuntosVida() {
+    public int getpuntosVida() {
         return puntosVida;
     }
 
-    public String getNombre() {
+    public String getnombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
+    public void setnombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public void setFuerza(int fuerza) {
+    public void setfuerza(int fuerza) {
         this.fuerza = fuerza;
     }
 
-    public int getFuerza() {
+    public int getfuerza() {
         return fuerza;
     }
 
     
     
     public void atacar(){
-        System.out.println("El personaje "+this.getNombre()+" está atacando");
+        System.out.println("El personaje "+this.getnombre()+" está atacando");
     }
     
     public void defender(){
-        System.out.println("El personaje"+this.getNombre()+" está defendiendo");
+        System.out.println("El personaje"+this.getnombre()+" está defendiendo");
     }
             
     
