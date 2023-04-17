@@ -1,0 +1,77 @@
+//Implementar la clase Socio, cuyos atributos son dni, nombre y fechaAlta,
+//que deberá incluir el método equals ( ) 
+//la interfaz Comparable basada en el dni y el método antiguedad ( )
+package socios2;
+
+import java.util.Date;
+
+public class Socio implements Comparable{
+    private String dni;
+    private String nombre;
+    private Date fechaAlta;
+
+    public Socio(String dni, String nombre, Date fechaAlta) {
+        this.dni = dni;
+        this.nombre = nombre;
+        this.fechaAlta = fechaAlta;
+    }
+    
+    //gets
+
+    public String getDni() {
+        return dni;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public Date getFechaAlta() {
+        return fechaAlta;
+    }
+    
+    //sets
+
+    public void setDni(String dni) {
+        this.dni = dni;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setFechaAlta(Date fechaAlta) {
+        this.fechaAlta = fechaAlta;
+    }
+    
+    @Override
+    public boolean equals(Object otro){
+        
+        boolean res=false;
+        
+        Socio otroSocio=(Socio)otro;
+        
+        if(this.dni.equals(otroSocio.dni)){
+            res=true;
+    }    
+}
+    
+    //comparator
+    @Override
+    public int CompareTo(Object o){
+        int res=0;
+        Socio otroSocio=(Socio)o;
+        
+        if(this.getDni()<otroSocio.getDni()){
+            res=-1;
+        }else if(this.getDni()>otroSocio.getDni()){
+            res=1;
+        }else{
+            if(){
+                
+            }
+        }
+    }
+
+}
+    
